@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Icarus — Know the Limit</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                LIMIT MANAGEMENT SYSTEM
+            </p>
+
+
+            <h1>
+                Icarus
+            </h1>
+
+
+            <p class="tagline">
+                Know your limit before you cross it.
+            </p>
+
+
+            <p class="description">
+                Track anything that matters to you, monitor your limits,
+                and know when it's time to stop.
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- DASHBOARD -->
+
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        OVERVIEW
+                    </p>
+
+                    <h2>
+                        Your Dashboard
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="dashboard"
+                class="dashboard"
+            >
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CREATE TRACKER -->
+
+        <section class="creator-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        NEW TRACKER
+                    </p>
+
+                    <h2>
+                        Create a Limit
+                    </h2>
+
+                </div>
+
+
+                <p>
+
+                    Track screen time, money, study hours,
+                    pages, tasks, or anything measurable.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- TRACKER TYPE -->
+
+            <div class="input-group tracker-type-selector">
+
+                <label for="tracker-type">
+                    Tracker Type
+                </label>
+
+
+                <select id="tracker-type">
+
+                    <option value="counter">
+                        Counter
+                    </option>
+
+
+                    <option value="timer">
+                        Timer
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <div class="tracker-form">
+
+
+                <!-- NAME -->
+
+                <div class="input-group">
+
+                    <label for="tracker-name">
+                        Tracker Name
+                    </label>
+
+
+                    <input
+                        id="tracker-name"
+                        type="text"
+                        placeholder="e.g. Patience Level"
+                    >
+
+                </div>
+
+
+
+                <!-- COUNTER FIELDS -->
+
+                <div
+                    id="counter-fields"
+                    class="form-fields"
+                >
+
+
+                    <div class="input-group">
+
+                        <label for="current-value">
+                            Current Value
+                        </label>
+
+
+                        <input
+                            id="current-value"
+                            type="number"
+                            placeholder="e.g. 5"
+                            min="0"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label for="limit-value">
+                            Limit
+                        </label>
+
+
+                        <input
+                            id="limit-value"
+                            type="number"
+                            placeholder="e.g. 10"
+                            min="0"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label for="unit">
+                            Unit
+                        </label>
+
+
+                        <input
+                            id="unit"
+                            type="text"
+                            placeholder="e.g. level, pages, dollars"
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TIMER FIELDS -->
+
+                <div
+                    id="timer-fields"
+                    class="form-fields hidden"
+                >
+
+
+                    <div class="input-group">
+
+                        <label for="limit-hours">
+                            Limit Hours
+                        </label>
+
+
+                        <input
+                            id="limit-hours"
+                            type="number"
+                            min="0"
+                            value="0"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label for="limit-minutes">
+                            Limit Minutes
+                        </label>
+
+
+                        <input
+                            id="limit-minutes"
+                            type="number"
+                            min="0"
+                            max="59"
+                            value="0"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label for="limit-seconds">
+                            Limit Seconds
+                        </label>
+
+
+                        <input
+                            id="limit-seconds"
+                            type="number"
+                            min="0"
+                            max="59"
+                            value="0"
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CREATE BUTTON -->
+
+                <button
+                    id="create-tracker"
+                    class="primary-button"
+                >
+                    Create Tracker
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ACTIVE TRACKERS -->
+
+        <section class="trackers-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        ACTIVE TRACKERS
+                    </p>
+
+
+                    <h2>
+                        Your Limits
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                id="tracker-list"
+                class="tracker-grid"
+            >
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Icarus — Know the Limit
+        </p>
+
+
+        <p>
+            Built for Codexis Round 3
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
